@@ -89,8 +89,14 @@ var Route = {
     routes[idRoute] = new THREE.Line(geometryL, colorLine);
 
     //-- Add object for start & end
-    if(first!==null) this.addCircle('route-'+idRoute+'-first', first, color, 7);
-    if(!hideLast && last!==null)  this.addCircle('route-'+idRoute+'-last', last, color, 3);
+    // check if we're to draw circles in the first place
+
+    if(Ed3d.showRouteCircles) {
+
+      if(first!==null) this.addCircle('route-'+idRoute+'-first', first, color, 7);
+      if(!hideLast && last!==null)  this.addCircle('route-'+idRoute+'-last', last, color, 3);
+
+    }
 
     routes[idRoute].name = 'route-'+idRoute;
 

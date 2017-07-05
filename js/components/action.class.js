@@ -20,6 +20,7 @@ var Action = {
   'animPosition' : null,
 
   'prevScale' : null,
+  'showGrid'  : false, 
 
   'pointCastRadius' : 2,
 
@@ -29,7 +30,11 @@ var Action = {
    * Init Raycaster for events on Systems
    */
 
-  'init' : function() {
+  'init' : function(options) {
+
+    console.log('ACTIONS INIT:', this);
+    console.log('Options', options);
+    console.log('Ed3d', Ed3d);
 
     this.mouseVector = new THREE.Vector3();
     this.raycaster = new THREE.Raycaster();
@@ -458,8 +463,10 @@ var Action = {
     //-- If in far view reset to classic view
     disableFarView(25, false);
 
-    //-- Move grid to object
-    this.moveGridTo(goX, goY, goZ);
+    if(Ed3d.showGrid) {
+      //-- Move grid to object
+      this.moveGridTo(goX, goY, goZ);
+    }
 
     //-- Move camera to target (Smooth move using Tween)
 

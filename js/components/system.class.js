@@ -72,6 +72,8 @@ var System = {
 
       this.particleGeo.vertices.push(particle);
 
+      Ed3d.systems.push(particle);
+
       this.count++;
     }
 
