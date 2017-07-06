@@ -4,7 +4,7 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-  <title>Canonn | Guardian Ruins Map</title>
+  <title>Canonn | Thargoid Structures and UL Destinations</title>
   <link href="http://fonts.googleapis.com/css?family=Orbitron:400" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext" rel="stylesheet">
   <link href="us_sites_mapping/css/us_map.css" rel="stylesheet" type="text/css" />
