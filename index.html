@@ -375,7 +375,7 @@ Aries Dark Region GW-W d1-86	1 B	-28.2303 // 99.0130	N	-21.25 / -129.75 / -227.8
                           "z":coords[2]
                   }
 
-                   systemsData["systems"].push(sysInfo);
+                  systemsData["systems"].push(sysInfo);
           }
 
     });
@@ -397,20 +397,25 @@ Aries Dark Region GW-W d1-86	1 B	-28.2303 // 99.0130	N	-21.25 / -129.75 / -227.8
 				var sysId = system.systemId;
 				var sysName = system.systemName;
 
-				var newSystem = {
-					 "name":sysName,
-					 "coords":{
-						"x": stellarCoords[sysId].x,
-						"y": stellarCoords[sysId].y,
-						"z": stellarCoords[sysId].z
-					 },
-					 "cat":[
-						"100"
-					 ]
-				 }
+				if(sysName.substr(0,2) != 'z.'){
+					var newSystem = {
+						 "name":sysName,
+						 "coords":{
+							"x": stellarCoords[sysId].x,
+							"y": stellarCoords[sysId].y,
+							"z": stellarCoords[sysId].z
+						 },
+						 "cat":[
+							"100"
+						 ]
+					}
+
+					//Add system 
+					systemsData["systems"].push(newSystem);
+				}
+
 				
-				//Add system 
-				systemsData["systems"].push(newSystem);
+
 			});
 		})
 		.fail(function(d, textStatus, error){
